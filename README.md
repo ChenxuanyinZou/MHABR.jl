@@ -68,6 +68,22 @@ print_tree(tree)
 Integer, string, and symbol class labels are supported. Feature values must be
 finite real numbers without `missing` values.
 
+## Iris Example
+
+A complete offline three-class example is available in
+[`examples/iris.jl`](examples/iris.jl). It loads the bundled Iris CSV, uses a
+fixed stratified 120/30 training/test split, fits a depth-two MHABR tree, and
+prints predictions, test accuracy, and the learned tree.
+
+Run it from the repository root:
+
+```bash
+julia --project=. examples/iris.jl
+```
+
+The dataset attribution and license are documented in
+[`examples/data/README.md`](examples/data/README.md).
+
 ## Tree Representation
 
 An `MHABRTree` contains recursive `SplitNode` and `LeafNode` objects:

@@ -5,6 +5,11 @@ from [DecisionTree.jl](https://github.com/JuliaAI/DecisionTree.jl). Changes
 made for MHABR include the additional split-evaluation metadata used by the
 algorithm.
 
+The bundled `examples/data/iris.csv` file is byte-identical to
+`test/data/iris.csv` from DecisionTree.jl v0.12.3. Dataset-specific
+attribution and license information is provided in
+[`examples/data/README.md`](examples/data/README.md).
+
 DecisionTree.jl states that its code is released under the MIT License and was
 originally adapted from MILK: Machine Learning Toolkit:
 
