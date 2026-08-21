@@ -1,0 +1,11 @@
+.DS_Store
+._*
+*.cov
+*.mem
+*.ji
+*.tmp
+/docs/build/
+/data/
+/CART_MH_*
+/Train_Result
+/Train_Test
