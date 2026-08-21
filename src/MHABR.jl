@@ -5,12 +5,14 @@ using .ClassificationTree
 using StatsBase: mode
 import StatsBase: fit, predict, score
 using Random
+include("datasets.jl")
 include("utils.jl") # utility functions, including data loading and processing
 using .Utils
 
 
 export AbstractMHABRNode, SplitNode, LeafNode, MHABRTree
 export fit, mhabr, predict, predict_proba, score, parameters, print_tree
+export load_iris
 export mh
 
 

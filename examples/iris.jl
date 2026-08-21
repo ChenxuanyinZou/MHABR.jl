@@ -1,23 +1,9 @@
-using CSV
 using DataFrames
 using MHABR
 using Random
 
 const IRIS_CLASSES = ["Iris-setosa", "Iris-versicolor", "Iris-virginica"]
 const FEATURE_NAMES = ["sepal length", "sepal width", "petal length", "petal width"]
-
-function load_iris(path=joinpath(@__DIR__, "data", "iris.csv"))
-    data = CSV.read(path, DataFrame; header=false)
-    size(data) == (150, 5) || error("expected a 150-by-5 Iris CSV at $path")
-
-    X = Matrix{Float64}(data[:, 1:4])
-    y = String.(data[:, 5])
-    classes = sort(unique(y))
-    classes == IRIS_CLASSES || error("unexpected Iris classes: $classes")
-    all(label -> count(==(label), y) == 50, IRIS_CLASSES) ||
-        error("expected 50 observations for each Iris class")
-    return X, y
-end
 
 function iris_split()
     train = vcat(1:40, 51:90, 101:140)
