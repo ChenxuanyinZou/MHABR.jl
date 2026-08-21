@@ -1,5 +1,7 @@
 # MHABR.jl
 
+[![CI](https://github.com/ChenxuanyinZou/MHABR.jl/actions/workflows/CI.yml/badge.svg)](https://github.com/ChenxuanyinZou/MHABR.jl/actions/workflows/CI.yml)
+
 MHABR.jl implements the **Moving-Horizon Approximate Branch-and-Reduce
 (MHABR)** method for training near-optimal deep classification trees within a
 bilevel optimization framework.
